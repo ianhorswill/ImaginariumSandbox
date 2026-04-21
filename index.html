@@ -4,33 +4,34 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Step sandbox</title>
-
-    <script>
-        (function () {
-            // Detect base path from URL (e.g., /myapp/ -> "myapp")
-            var pathSegments = window.location.pathname.split('/').filter(s => s);
-            var basePath = pathSegments.length > 0 ? `/${pathSegments[0]}/` : '/';
-
-            console.log('Detected base path:', basePath);
-            // Create and insert <base> tag dynamically
-            var baseTag = document.createElement('base');
-            baseTag.href = basePath;
-            document.head.appendChild(baseTag);
-
-            // Optional: store for later use in JS interop
-            window.__blazorBasePath = basePath;
-        })();
-    </script>
-
+    <title>Imaginarium</title>
+    <link href="_framework/dotnet.cuj3nle4ni.js" rel="preload" as="script" fetchpriority="high" crossorigin="anonymous" integrity="sha256-zK2ViD7qWZ+Cr18cDMw5zGC8T1xGufwnlTldmRosDU4=" />
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/app.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
-    <link href="StepWasmStandalone.styles.css" rel="stylesheet" />
+    <link href="WebAssemblySandbox.styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11/build/styles/atom-one-dark.min.css">
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11/build/highlight.min.js"></script>
-    <script src="step.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/pixi.js@8.12.0/dist/pixi.min.js"></script>
+    <script src="Imaginarium.js"></script>
+    <script type="importmap">{
+  "imports": {
+    "./_framework/blazor.webassembly.js": "./_framework/blazor.webassembly.66stpp682q.js",
+    "./_framework/dotnet.js": "./_framework/dotnet.cuj3nle4ni.js",
+    "./_framework/dotnet.native.js": "./_framework/dotnet.native.3qf6w265iu.js",
+    "./_framework/dotnet.runtime.js": "./_framework/dotnet.runtime.f4b1oiwlzh.js"
+  },
+  "scopes": {},
+  "integrity": {
+    "./_framework/blazor.webassembly.66stpp682q.js": "sha256-3lCWrko3zwspV40aQhs2S/IMkRSarnHRKIdkHhuXIBA=",
+    "./_framework/blazor.webassembly.js": "sha256-3lCWrko3zwspV40aQhs2S/IMkRSarnHRKIdkHhuXIBA=",
+    "./_framework/dotnet.cuj3nle4ni.js": "sha256-zK2ViD7qWZ+Cr18cDMw5zGC8T1xGufwnlTldmRosDU4=",
+    "./_framework/dotnet.js": "sha256-zK2ViD7qWZ+Cr18cDMw5zGC8T1xGufwnlTldmRosDU4=",
+    "./_framework/dotnet.native.3qf6w265iu.js": "sha256-5WJWKyRAy1ynOGugXKh/YchOnzSV97RMlyJnLcgr7m8=",
+    "./_framework/dotnet.native.js": "sha256-5WJWKyRAy1ynOGugXKh/YchOnzSV97RMlyJnLcgr7m8=",
+    "./_framework/dotnet.runtime.f4b1oiwlzh.js": "sha256-j86bNQPKznxC4epcftZFbThfaMXvIRmSeHo8PdvTrdA=",
+    "./_framework/dotnet.runtime.js": "sha256-j86bNQPKznxC4epcftZFbThfaMXvIRmSeHo8PdvTrdA="
+  }
+}</script>
 </head>
 
 <body>
@@ -47,7 +48,7 @@
         <a href="." class="reload">Reload</a>
         <span class="dismiss">🗙</span>
     </div>
-    <script src="_framework/blazor.webassembly.js"></script>
+    <script src="_framework/blazor.webassembly.66stpp682q.js"></script>
 </body>
 
 </html>
