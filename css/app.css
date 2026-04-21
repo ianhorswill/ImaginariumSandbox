@@ -68,12 +68,11 @@ a, .btn-link {
     }
 
 .loading-progress {
-    position: absolute;
+    position: relative;
     display: block;
     width: 8rem;
     height: 8rem;
-    inset: 20vh 0 auto 0;
-    margin: 0 auto 0 auto;
+    margin: 20vh auto 1rem auto;
 }
 
     .loading-progress circle {
@@ -114,21 +113,8 @@ code {
     text-align: start;
 }
 
-/* Make Mermaid diagrams responsive */
-.mermaid {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    overflow-x: auto;
-}
-
-.mermaidTooltip {
-    color:black;
-    display: block;
-    text-align: left;
-    padding: 2px;
-    border: 1px solid #aaaa33;
-    border-radius: 2px;
-    pointer-events: none;
-    z-index: 1000; /* Ensure tooltip appears above diagram */
+.language-step {
+    height: 66vh;
+    font-size: .9em;
+    caret-color: white;
 }
